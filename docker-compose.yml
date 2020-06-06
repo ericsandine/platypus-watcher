@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  platypus-watcher:
+    image: ericsandine/platypuswatcher:latest
+    container_name: platypus-watcher
+    tty: true
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/app
